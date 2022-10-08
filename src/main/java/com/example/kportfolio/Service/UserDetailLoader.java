@@ -13,6 +13,7 @@ public class UserDetailLoader {
     public
     class UserDetailsLoader extends User implements UserDetailsService {
         private final UserRepository users;
+
         public UserDetailsLoader(UserRepository users) {
             this.users = users;
         }
@@ -26,3 +27,4 @@ public class UserDetailLoader {
             return new UserWithRoles(user);
         }
     }
+}

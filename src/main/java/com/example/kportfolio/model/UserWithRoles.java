@@ -6,7 +6,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
-public class UserWithRoles {
     public class UserWithRoles extends User implements UserDetails {
 
         private User user;
@@ -25,6 +24,11 @@ public class UserWithRoles {
         @Override
         public String getPassword() {
             return user.getPassword();
+        }
+
+        @Override
+        public String getUsername() {
+            return null;
         }
 
         @Override
@@ -48,7 +52,9 @@ public class UserWithRoles {
         }
 
         @Override
-        public boolean isEnabled() {return  user.isEnable();}
+        public boolean isEnabled() {
+            return user.isEnable();
+        }
 
 
     }

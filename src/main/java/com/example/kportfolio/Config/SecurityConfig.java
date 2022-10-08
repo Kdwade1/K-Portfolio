@@ -1,17 +1,24 @@
 package com.example.kportfolio.Config;
 
+import com.example.kportfolio.Service.UserDetailLoader;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
 
 public class SecurityConfig {
-    private UserDetailsLoader userDetailsLoader;
+    private UserDetailLoader userDetailsLoader;
 
-    public SecurityConfig(UserDetailsLoader userDetailsLoader) {
-        this.userDetailsLoader = userDetailsLoader;
-    }
+    public SecurityConfig(UserDetailLoader userDetailsLoader) {this.userDetailsLoader = userDetailsLoader;}
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -39,9 +46,9 @@ public class SecurityConfig {
                 .permitAll()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/menu")
+                .antMatchers("/CSS2,/CSS3,JavaScript2,JavaScript3,JavaPost")
                 .authenticated();
         return httpSecurity.build();
     }
 }
-}
+
