@@ -20,8 +20,8 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Autowired
-    private JavaMailSender mailSender;
+@Autowired
+private JavaMailSender mailSender;
 
 
     public void register(User user, String siteURL) throws UnsupportedEncodingException, MessagingException {
