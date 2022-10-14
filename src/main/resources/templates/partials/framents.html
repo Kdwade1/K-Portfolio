@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" href="/CSS/CSS1.css">
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+</head>
+<body>
+<nav th:fragment="navbar" id="navbar">
+    <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link "href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/css">CSS</a></li>
+        <li class="nav-item"><a class="nav-link" href="/javascript">JavaScript</a></li>
+        <li class="nav-item"><a class="nav-link" href="/java"></a> Java</li>
+        <li class="nav-item"><a class="nav-link" href="/about"></a>About-Me</li>
+        <th:block sec:authorize="!isAuthenticated()">
+            <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+        </th:block>
+        <th:block sec:authorize="!isAuthenticated()">
+            <li class="nav-item"><a  class="nav-link" href="/login">Login</a></li>
+        </th:block>
+        <th:block sec:authorize="isAuthenticated()">
+            <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+        </th:block>
+    </ul>
+</nav>
+</body>
+</html>
