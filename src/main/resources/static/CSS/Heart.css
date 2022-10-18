@@ -1,10 +1,13 @@
-body{
+.container{
     margin: 0;
     padding:0;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #0b1522;
+}
+body{
     background: #0b1522;
 }
 
@@ -111,4 +114,38 @@ body{
 
 
  }
+.nav-list {
+    list-style-type: none;
+    background-color: goldenrod;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+}
+.nav-item
+{
+    display: inline;
+
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+
+.nav-item:last-child {
+    border-right: none;
+}
+.nav-link{
+    display: block;
+    padding: 8px;
+    background-color: goldenrod;
+}
+.nav-item .nav-link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav-item .nav-link:hover {
+    background-color: red;
+}
 

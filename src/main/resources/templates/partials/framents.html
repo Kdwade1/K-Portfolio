@@ -3,7 +3,7 @@
 <head th:fragment="head(title)">
     <meta charset="UTF-8">
     <title th:text="${title}"></title>
-    <link rel="stylesheet" href="/CSS/CSS1.css">
+    <link rel="stylesheet" href="/CSS/Heart.css">
     <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
 </head>
 <body>
@@ -12,8 +12,8 @@
         <li class="nav-item"><a class="nav-link "href="/">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="/css">CSS</a></li>
         <li class="nav-item"><a class="nav-link" href="/javascript">JavaScript</a></li>
-        <li class="nav-item"><a class="nav-link" href="/java"></a> Java</li>
-        <li class="nav-item"><a class="nav-link" href="/about"></a>About-Me</li>
+        <li class="nav-item"><a class="nav-link" href="/java"> Java</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">About-Me</a></li>
         <th:block sec:authorize="!isAuthenticated()">
             <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
         </th:block>
@@ -25,5 +25,9 @@
         </th:block>
     </ul>
 </nav>
+<div th:fragment="script">
+<script src="/Javascript/Bars.js"></script>
+<script src="/Javascript/Mic.js"></script>
+</div>
 </body>
 </html>
