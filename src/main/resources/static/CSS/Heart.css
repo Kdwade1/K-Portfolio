@@ -9,6 +9,7 @@
 }
 body{
     background: #0b1522;
+    overflow: hidden;
 }
 
 .heart{
@@ -116,7 +117,7 @@ body{
  }
 .nav-list {
     list-style-type: none;
-    background-color: goldenrod;
+    background: linear-gradient(black,white);
     margin: 0;
     padding: 0;
     overflow:hidden;
@@ -136,7 +137,7 @@ body{
 .nav-link{
     display: block;
     padding: 8px;
-    background-color: goldenrod;
+    background: linear-gradient(black,white);
 }
 .nav-item .nav-link {
     display: block;
@@ -146,6 +147,7 @@ body{
     text-decoration: none;
 }
 .nav-item .nav-link:hover {
+    /*animation: Colors 45s linear infinite;*/
     background-color: red;
 }
 
