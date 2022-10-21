@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head>
+<head th:replace="partials/framents::head(Javascript)">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -8,5 +8,7 @@
 <nav th:replace="partials/framents::navbar"></nav>
 <canvas id="canvas1"></canvas>
 <div th:replace="partials/framents::script"></div>
+<button><a href="/javascript2">Next</a> </button>
+<button><a href="/">Home</a> </button>
 </body>
 </html>
