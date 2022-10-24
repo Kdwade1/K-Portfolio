@@ -28,6 +28,9 @@ public class HomeController {
         return "index";
     }
 
+    @GetMapping("technical-skills")
+    public String showTech(){return "technical-skills";}
+
     @GetMapping("/register")
     public String register(Model model) {
         try {
