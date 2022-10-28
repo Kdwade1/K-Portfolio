@@ -28,8 +28,17 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("technical-skills")
+    @GetMapping("/technical-skills")
     public String showTech(){return "technical-skills";}
+
+    @GetMapping("/about-me")
+    public String showAbout(){return "about-me";}
+
+    @GetMapping("/contact")
+    public String showContact(){return "contact";}
+
+    @GetMapping("/login")
+    public String login(){return "login";}
 
     @GetMapping("/register")
     public String register(Model model) {

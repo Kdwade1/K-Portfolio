@@ -8,4 +8,7 @@ public class JavaScriptController {
     public String showJs(){
         return"javascript1";
     }
+
+    @GetMapping("JavaScript2")
+    public String showJs2(){return "javascript2";}
 }
