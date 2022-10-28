@@ -33,3 +33,19 @@
     /*animation: Colors 45s linear infinite;*/
     background-color: red;
 }
+
+.fa-js{
+    color: yellow;
+}
+.fa-css3-alt{
+    color:blue;
+}
+.fa-java{
+    color:red;
+}
+
+.icon{
+    display:flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
