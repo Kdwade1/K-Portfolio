@@ -115,6 +115,7 @@ body{
 
 
  }
+
 .nav-list {
     list-style-type: none;
     background: linear-gradient(black,white);
@@ -129,6 +130,7 @@ body{
     float: left;
     border-right: 1px solid #bbb;
 }
+
 
 
 .nav-item:last-child {

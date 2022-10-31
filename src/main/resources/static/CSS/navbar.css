@@ -1,39 +1,71 @@
-.nav-list {
-    list-style-type: none;
-    background: linear-gradient(black,white,black,gray);
-    margin: 0;
-    padding: 0;
-    overflow:hidden;
-}
-.nav-item
-{
-    display: inline;
+/*.nav-list {*/
+/*    list-style-type: none;*/
+/*    background: linear-gradient(black,limegreen,black,limegreen);*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    overflow:hidden;*/
+/*}*/
+/*.nav-item*/
+/*{*/
+/*    display: inline;*/
 
+/*    float: left;*/
+/*    border-right: 1px solid #bbb;*/
+/*}*/
+/*#navbar{*/
+/*    !*position: fixed;*!*/
+/*    !*top:0*!*/
+/*    width:100%;*/
+/*    margin-bottom: 10px;*/
+/*    height:40px;*/
+/*}*/
+
+
+/*.nav-item:last-child {*/
+/*    border-right: none;*/
+/*}*/
+/*.nav-link{*/
+/*    display: block;*/
+/*    padding: 8px;*/
+/*    background: linear-gradient(black,orangered,black,orangered);*/
+/*}*/
+/*.nav-item .nav-link {*/
+/*    display: block;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*}*/
+/*.nav-item .nav-link:hover {*/
+/*    !*animation: Colors 45s linear infinite;*!*/
+/*    background-color: red;*/
+/*}*/
+#navbar {
+    width: 100%;
     float: left;
-    border-right: 1px solid #bbb;
-}
-
-
-.nav-item:last-child {
-    border-right: none;
-}
-.nav-link{
+    margin: 0 0 1em 0;
+    padding: 0;
+    background-color: black;
+    border-bottom: 1px solid #ccc;  }
+#navbar ul {
+    list-style: none;
+    width: 800px;
+    margin: 0 auto;
+    padding: 0; }
+#navbar li {
+    float: left; }
+#navbar li a {
     display: block;
-    padding: 8px;
-    background: linear-gradient(black,white,black,gray);
-}
-.nav-item .nav-link {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 8px 15px;
     text-decoration: none;
-}
-.nav-item .nav-link:hover {
-    /*animation: Colors 45s linear infinite;*/
-    background-color: red;
-}
-
+    font-weight: bold;
+    color: #069;
+    border-right: 1px solid #ccc; }
+#navbar li:first-child a {
+    border-left: 1px solid #ccc; }
+#navbar li a:hover {
+    color: green;
+    background-color: #fff; }
 .fa-js{
     color: yellow;
 }
@@ -48,5 +80,5 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
