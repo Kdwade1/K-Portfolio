@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head th:replace="partials/framents::head('Portfolio')">
+<head th:replace="partials/framents::head('Login')">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<h1>Kelvin Wade</h1>
 <nav th:replace="partials/framents::navbar"></nav>
-<img src="/IMG/kpic.jpg" alt="hello">
+<div th:if="${param.error}">
+Invalid Username and Password.
+</div>
+<div th:if="${param.logout}">
+    You have logged out.
+</div>
+<form th:action="@{/login}" method="post"></form>
+
+
 </body>
 </html>

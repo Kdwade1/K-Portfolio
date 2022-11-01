@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="partials/framents::head(title)">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title></title>
 </head>
 <body>
-
+<nav th:replace="partials/framents::navbar"></nav>
+<div class="icon">
+    <a href="/CSS"><i class="fa-brands fa-css3-alt fa-10x"></i></a>
+<a href="/JavaScript"><i class="fa-brands fa-js fa-10x"></i></a>
+<a href="/java"><i class="fa-brands fa-java fa-10x"></i></a>
+</div>
 </body>
 </html>

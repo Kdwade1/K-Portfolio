@@ -5,15 +5,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class CSSController {
-    @GetMapping("/css")
+    @GetMapping("/CSS")
     public String showCss(){
         return"css1";
     }
-    @GetMapping("/css2")
+    @GetMapping("/CSS2")
     public String showCss2(){
         return "css2";
     }
-    @GetMapping("/css3")
+    @GetMapping("/CSS3")
     public String showCss3() {
         return "css3";
     }
