@@ -66,6 +66,7 @@
 #navbar li a:hover {
     color: green;
     background-color: #fff; }
+
 .fa-js{
     color: yellow;
 }
@@ -77,6 +78,7 @@
 }
 
 .icon{
+    top:12em;
     display:flex;
     flex-direction: column;
     justify-content: center;
