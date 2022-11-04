@@ -64,7 +64,7 @@
 #navbar li:first-child a {
     border-left: 1px solid #ccc; }
 #navbar li a:hover {
-    color: green;
+    color: red;
     background-color: #fff; }
 
 .fa-js{
@@ -80,7 +80,19 @@
 .icon{
     top:12em;
     display:flex;
-    flex-direction: column;
+    width:100%;
+    /*flex-direction: column;*/
     justify-content: center;
     align-items: center;
+    align-content: space-evenly;
+}
+.card{
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+    padding: 2px 16px;
 }
