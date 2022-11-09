@@ -120,11 +120,16 @@ body{
  .footer{
      display:flex;
      height:15vh;
+     justify-content: center;
  }
  .home{
      justify-content: flex-end;
-     color:yellow;
+     color:lightblue;
      align-content: center;
+     margin-right:700px;
+ }
+ .rite{
+     color:red;
  }
 
 /*.nav-list {*/
