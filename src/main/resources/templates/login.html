@@ -12,7 +12,14 @@ Invalid Username and Password.
 <div th:if="${param.logout}">
     You have logged out.
 </div>
-<form th:action="@{/login}" method="post"></form>
+<form th:action="@{/login}" method="post">
+    <label for="username"><span class="required">*</span>Username:</label>
+    <input class="login-input" id="username" type="text"><br>
+    <label for="email"><span class="required">*</span>Email:</label>
+    <input class="login-input" id="email" type="email"><br>
+    <label for="password"><span class="required">*</span>Password:</label>
+    <input class="login-input" id="password" type="password">
+</form>
 
 
 </body>

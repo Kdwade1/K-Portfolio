@@ -4,6 +4,7 @@ import com.example.kportfolio.Repository.UserRepository;
 import com.example.kportfolio.Service.UserService;
 import com.example.kportfolio.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -22,6 +23,10 @@ public class HomeController {
     @Autowired
     UserService services;
 
+    public HomeController(UserRepository userDao, PasswordEncoder passwordEncoder) {
+        this.userDao = userDao;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @GetMapping("/")
     public String showHome() {
@@ -80,5 +85,13 @@ public class HomeController {
     private String getSiteUrl(HttpServletRequest request) {
         String siteUrl = request.getRequestURL().toString();
         return siteUrl.replace(request.getServletPath(), "");
+    }
+    @GetMapping("/verify")
+    public String verifyUser(@Param("code") String code) {
+        if (services.verify(code)) {
+            return "verify_success";
+        } else {
+            return "verify_fail";
+        }
     }
 }

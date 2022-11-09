@@ -1,7 +1,7 @@
 .container{
     margin: 0;
     padding:0;
-    min-height: 100vh;
+    min-height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,6 +20,8 @@ body{
     position: relative;
     transform: rotate(-45deg);
     box-shadow: -10px 10px 90px white;
+    /*align-items: center;*/
+    /*justify-content: center;*/
 
     animation:heart 1s linear infinite, Colors  45s linear infinite
     /*Shadows 45s linear infinite;*/
@@ -115,41 +117,55 @@ body{
 
 
  }
+ .footer{
+     display:flex;
+     height:15vh;
+     justify-content: center;
+ }
+ .home{
+     justify-content: flex-end;
+     color:lightblue;
+     align-content: center;
+     margin-right:700px;
+ }
+ .rite{
+     color:red;
+ }
 
-.nav-list {
-    list-style-type: none;
-    background: linear-gradient(black,white);
-    margin: 0;
-    padding: 0;
-    overflow:hidden;
-}
-.nav-item
-{
-    display: inline;
+/*.nav-list {*/
+/*    list-style-type: none;*/
+/*    background: linear-gradient(black,white);*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    overflow:hidden;*/
+/*}*/
+/*.nav-item*/
+/*{*/
+/*    display: inline;*/
 
-    float: left;
-    border-right: 1px solid #bbb;
-}
+/*    float: left;*/
+/*    border-right: 1px solid #bbb;*/
+/*}*/
 
 
 
-.nav-item:last-child {
-    border-right: none;
-}
-.nav-link{
-    display: block;
-    padding: 8px;
-    background: linear-gradient(black,white);
-}
-.nav-item .nav-link {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-.nav-item .nav-link:hover {
-    /*animation: Colors 45s linear infinite;*/
-    background-color: red;
-}
+/*.nav-item:last-child {*/
+/*    border-right: none;*/
+/*}*/
+/*.nav-link{*/
+/*    display: block;*/
+/*    padding: 8px;*/
+/*    background: linear-gradient(black,white);*/
+/*}*/
+/*.nav-item .nav-link {*/
+/*    display: block;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*}*/
+/*.nav-item .nav-link:hover {*/
+/*    !*animation: Colors 45s linear infinite;*!*/
+/*    background-color: red;*/
+/*}*/
 
