@@ -1,0 +1,22 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    margin:0;
+
+}
+.label{
+    width:50px;
+    height:26px;
+    display:flex;
+    background-color:#111;
+
+}
+.fa-moon{
+    color:#f1c40f
+
+}
+.fa-sun{
+    color:#f39c12
+}
