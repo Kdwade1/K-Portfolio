@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     display:flex;
     justify-content: center;
@@ -11,6 +14,9 @@ body{
     height:26px;
     display:flex;
     background-color:#111;
+    align-items: center;
+    justify-content: space-between;
+    padding:5px;
 
 }
 .fa-moon{
@@ -19,4 +25,13 @@ body{
 }
 .fa-sun{
     color:#f39c12
+}
+.ball{
+    background-color: #fff;
+    height:22px;
+    width:22px;
+    position:absolute;
+    top:2px;
+    left:2px;
+    border-radius: 50px;
 }
