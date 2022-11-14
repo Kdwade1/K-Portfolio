@@ -1,4 +1,6 @@
 
-document.getElementById("moon").addEventListener("click",function(){
-    let sun= document.getElementById("sun")
+const checkbox= document.getElementById("checkbox")
+
+checkbox.addEventListener('change',()=>{
+document.body.classList.toggle('dark')
 })
