@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<nav th:replace="partials/framents::navbar"></nav>
 <form th:action="@{/register} "th:method="POST" class="reg">
 
     <label th:for="username" >Username</label>

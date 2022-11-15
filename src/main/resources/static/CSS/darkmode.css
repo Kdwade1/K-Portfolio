@@ -2,12 +2,16 @@
     box-sizing: border-box;
 }
 body{
+    background:linear-gradient(orangered,white,lightblue, orange, yellow);
+}
+.container{
     display:flex;
     justify-content: center;
     align-items: center;
-    height:100vh;
+    height:85vh;
     margin:0;
-    background:linear-gradient(white,lightblue, orange, yellow);
+    /*background:linear-gradient(white,lightblue, orange, yellow);*/
+    transition:background 0.2s linear;
 
 }
 body.dark{
@@ -23,6 +27,7 @@ body.dark{
     justify-content: space-between;
     padding:5px;
     position: relative;
+    transform:scale(1.5)
 
 }
 .fa-moon{
@@ -48,5 +53,10 @@ body.dark{
 #checkbox:checked +.label .ball{
     transform:translateX(24px);
 
+
+}
+  .footer{
+    display: flex;
+      justify-content: space-between;
 
 }
