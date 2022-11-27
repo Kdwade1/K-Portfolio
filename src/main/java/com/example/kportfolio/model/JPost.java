@@ -1,6 +1,10 @@
 package com.example.kportfolio.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
+import java.sql.Date;
+import java.sql.Time;
 
 @Entity
 @Table(name="Jpost")
@@ -14,25 +18,55 @@ public class JPost {
 
     @Column(nullable = false)
     private String post;
+    @JsonFormat(pattern = "HH:mm:ss")
+    private Time orderTime;
+
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private Date orderDate;
+
 
     @ManyToOne
     @JoinColumn(name = "userId")
     User user;
 
+
     public JPost() {
     }
 
-    public JPost(long id, String title, String post, User user) {
+
+
+
+    public JPost(long id, String title, String post, User user, Time orderTime, Date orderDate) {
         this.id = id;
         this.title = title;
         this.post = post;
         this.user = user;
+        this.orderTime = orderTime;
+        this.orderDate = orderDate;
     }
 
-    public JPost(String title, String post, User user) {
+    public JPost(String title, String post, User user, Time orderTime, Date orderDate) {
         this.title = title;
         this.post = post;
         this.user = user;
+        this.orderTime = orderTime;
+        this.orderDate = orderDate;
+    }
+
+    public Time getOrderTime() {
+        return orderTime;
+    }
+
+    public void setOrderTime(Time orderTime) {
+        this.orderTime = orderTime;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
     }
 
     public long getId() {
