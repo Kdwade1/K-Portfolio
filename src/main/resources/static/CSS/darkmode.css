@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(orangered,white,lightblue, orange, yellow);
+}
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:85vh;
+    margin:0;
+    /*background:linear-gradient(white,lightblue, orange, yellow);*/
+    transition:background 0.2s linear;
+
+}
+body.dark{
+    background:linear-gradient(black,indigo,white);
+}
+.label{
+    width:50px;
+    height:26px;
+    display:flex;
+    background-color:#111;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding:5px;
+    position: relative;
+    transform:scale(1.5)
+
+}
+.fa-moon{
+    color:#f1c40f
+
+}
+.fa-sun{
+    color:#f39c12
+}
+.ball{
+    background-color: #fff;
+    height:22px;
+    width:22px;
+    position:absolute;
+    top:2px;
+    left:2px;
+    border-radius: 50%;
+}
+#checkbox{
+    opacity: 0;
+    position:absolute;
+}
+#checkbox:checked +.label .ball{
+    transform:translateX(24px);
+
+
+}
+  .footer{
+    display: flex;
+      justify-content: space-between;
+
+}
+/* The sidepanel menu */
+.sidepanel {
+    height: 250px; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+p{
+    color:white;
+}

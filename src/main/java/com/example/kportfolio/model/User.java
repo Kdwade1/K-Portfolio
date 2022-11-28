@@ -1,6 +1,7 @@
 package com.example.kportfolio.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="user")
@@ -24,24 +25,30 @@ public class User {
     @Column
     private boolean enable;
 
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
+    private List<JPost> post;
+
     public User(User user) {
     }
 
-    public User(long id, String name, String password, String email, String verificationCode, boolean enable) {
+    public User(long id, String name, String password, String email, String verificationCode, boolean enable,List<JPost> post) {
         this.id = id;
         this.name = name;
         this.password = password;
         this.email = email;
         this.verificationCode = verificationCode;
         this.enable = enable;
+        this.post=post;
     }
 
-    public User(String name, String password, String email, String verificationCode, boolean enable) {
+
+    public User(String name, String password, String email, String verificationCode, boolean enable,List<JPost>post) {
         this.name = name;
         this.password = password;
         this.email = email;
         this.verificationCode = verificationCode;
         this.enable = enable;
+        this.post = post;
     }
 
     public User() {
@@ -93,5 +100,13 @@ public class User {
 
     public void setEnable(boolean enable) {
         this.enable = enable;
+    }
+
+    public List<JPost> getPost() {
+        return post;
+    }
+
+    public void setPost(List<JPost> post) {
+        this.post = post;
     }
 }

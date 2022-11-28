@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title th:text="${title}"></title>
     <link rel="stylesheet" href="/CSS/navbar.css">
+    <link rel="stylesheet" href="/CSS/login.css">
     <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/26af559ed8.js" crossorigin="anonymous"></script>
 </head>
@@ -12,7 +13,7 @@
     <ul class="nav-list">
         <li class="nav-item"><a class="nav-link "href="/">Home</a></li>
       <li class="nav-item"><a class= nav-link href="/technical-skills">Technical-Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+<!--        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>-->
         <th:block sec:authorize="!isAuthenticated()">
             <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
         </th:block>
@@ -25,6 +26,7 @@
     </ul>
 </nav>
 <div th:fragment="script">
+<!--    <script src="https://kit.fontawesome.com/26af559ed8.js" crossorigin="anonymous"></script>-->
 <script src="/Javascript/Bars.js"></script>
 <script src="/Javascript/Mic.js"></script>
 </div>
