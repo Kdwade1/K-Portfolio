@@ -11,7 +11,18 @@
             <h1> Create A Post</h1>
         </div>
         <form th:action="@{/JPost/create}">
-            <div></div>
+            <div class="creation-form">
+                <<label for="title"></label>
+                <input id="title" type="text">
+                <label for="post"></label>
+                <textarea id="post"></textarea>
+                <label for="date" ></label>
+                <input type="date" id="date">
+                <label for="time"></label>
+                <input type="time" id="time">
+
+
+            </div>
 
         </form>
 

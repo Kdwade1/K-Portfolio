@@ -16,7 +16,7 @@ import java.util.List;
 public class JavaController {
     private final UserRepository userDao ;
     private final JPostRepository JPostDao;
-    @Value()
+    @Value("AVHQNuSVLSPK8S5AWyXa2z")
     private String fileApi;
 
     public JavaController(UserRepository userDao, JPostRepository jPostDao) {
