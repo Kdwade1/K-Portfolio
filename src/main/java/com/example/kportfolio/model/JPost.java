@@ -35,8 +35,12 @@ public class JPost {
     public JPost() {
     }
 
-
-
+    public JPost(String title, String post, Time orderTime, Date orderDate) {
+        this.title = title;
+        this.post = post;
+        this.orderTime = orderTime;
+        this.orderDate = orderDate;
+    }
 
     public JPost(long id, String title, String post, User user, Time orderTime, Date orderDate, String picture) {
         this.id = id;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -10,12 +10,12 @@
         <div class="content">
             <h1> Create A Post</h1>
         </div>
-        <form th:action="@{/JPost/create}">
+        <form th:action="@{/JPost/create}" th:method="POST" th:object="${jpost}">
             <div class="creation-form">
-                <<label for="title"></label>
-                <input id="title" type="text">
+                <label for="title"></label>
+                <input id="title" th:field="*{title}" type="text">
                 <label for="post"></label>
-                <textarea id="post"></textarea>
+                <textarea id="post" th:field="*{post}"></textarea>
                 <label for="date" ></label>
                 <input type="date" id="date">
                 <label for="time"></label>
@@ -24,11 +24,13 @@
                 <input type="text" id="fileUploadDisplay" class="profile-pic">
                 <input type="hidden" id="fileupload" th:field="*{picture}"><br>
                 <button type="BUTTON" id="filePicker" onclick='apiCall()'>Select File</button>
+                <div class="postSubmit" style="text-align: center">
+                    <button type="submit" style="border-radius: 25px">Submit</button>
+                </div>
+
             </div>
-
+            <input type="hidden" th:field="*{id}">
         </form>
-
-
 
     </div>
 </div>
