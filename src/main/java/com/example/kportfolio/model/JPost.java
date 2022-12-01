@@ -23,6 +23,8 @@ public class JPost {
 
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date orderDate;
+    @Column()
+    private String picture;
 
 
     @ManyToOne
@@ -36,21 +38,23 @@ public class JPost {
 
 
 
-    public JPost(long id, String title, String post, User user, Time orderTime, Date orderDate) {
+    public JPost(long id, String title, String post, User user, Time orderTime, Date orderDate, String picture) {
         this.id = id;
         this.title = title;
         this.post = post;
         this.user = user;
         this.orderTime = orderTime;
         this.orderDate = orderDate;
+        this.picture=picture;
     }
 
-    public JPost(String title, String post, User user, Time orderTime, Date orderDate) {
+    public JPost(String title, String post, User user, Time orderTime, Date orderDate,String picture) {
         this.title = title;
         this.post = post;
         this.user = user;
         this.orderTime = orderTime;
         this.orderDate = orderDate;
+        this.picture =picture;
     }
 
     public Time getOrderTime() {
@@ -99,6 +103,14 @@ public class JPost {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 }
 

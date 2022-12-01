@@ -20,8 +20,10 @@
                 <input type="date" id="date">
                 <label for="time"></label>
                 <input type="time" id="time">
-                <label for="filestack">Select file to upload</label>
-                <input type="text" id="filestack" class="profile-pic">
+                <label for="fileUploadDisplay">Select file to upload</label>
+                <input type="text" id="fileUploadDisplay" class="profile-pic">
+                <input type="hidden" id="fileupload" th:field="*{picture}"><br>
+                <button type="BUTTON" id="filePicker" onclick='apiCall()'>Select File</button>
             </div>
 
         </form>
@@ -30,6 +32,6 @@
 
     </div>
 </div>
-
+<script src="Javascript/apiCall.js"></script>
 </body>
 </html>
