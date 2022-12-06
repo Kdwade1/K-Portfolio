@@ -12,13 +12,13 @@
         </div>
         <form th:action="@{/JPost/create}" th:method="POST" th:object="${jpost}">
             <div class="creation-form">
-                <label for="title"></label>
+                <label for="title">Title</label>
                 <input id="title" th:field="*{title}" type="text">
-                <label for="post"></label>
+                <label for="post">Post</label>
                 <textarea id="post" th:field="*{post}"></textarea>
-                <label for="date" ></label>
+                <label for="date" >Date</label>
                 <input type="date" id="date">
-                <label for="time"></label>
+                <label for="time">Time</label>
                 <input type="time" id="time">
                 <label for="fileUploadDisplay">Select file to upload</label>
                 <input type="text" id="fileUploadDisplay" class="profile-pic">
