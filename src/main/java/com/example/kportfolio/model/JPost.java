@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name="Jpost")
@@ -18,13 +19,30 @@ public class JPost {
 
     @Column(nullable = false)
     private String post;
-    @JsonFormat(pattern = "HH:mm:ss")
-    private Time orderTime;
 
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private Date orderDate;
     @Column()
     private String picture;
+
+    @Column(nullable= false)
+    private LocalDateTime dateTime= LocalDateTime.now();
+
+    public JPost(long id, String title, String post, String picture, LocalDateTime dateTime, User user) {
+        this.id = id;
+        this.title = title;
+        this.post = post;
+        this.picture = picture;
+        this.dateTime = dateTime;
+        this.user = user;
+    }
+
+    public JPost(String title, String post, String picture, LocalDateTime dateTime, User user) {
+        this.title = title;
+        this.post = post;
+        this.picture = picture;
+        this.dateTime = dateTime;
+        this.user = user;
+    }
+
 
 
     @ManyToOne
@@ -35,47 +53,10 @@ public class JPost {
     public JPost() {
     }
 
-    public JPost(String title, String post, Time orderTime, Date orderDate) {
-        this.title = title;
-        this.post = post;
-        this.orderTime = orderTime;
-        this.orderDate = orderDate;
-    }
 
-    public JPost(long id, String title, String post, User user, Time orderTime, Date orderDate, String picture) {
-        this.id = id;
-        this.title = title;
-        this.post = post;
-        this.user = user;
-        this.orderTime = orderTime;
-        this.orderDate = orderDate;
-        this.picture=picture;
-    }
 
-    public JPost(String title, String post, User user, Time orderTime, Date orderDate,String picture) {
-        this.title = title;
-        this.post = post;
-        this.user = user;
-        this.orderTime = orderTime;
-        this.orderDate = orderDate;
-        this.picture =picture;
-    }
 
-    public Time getOrderTime() {
-        return orderTime;
-    }
 
-    public void setOrderTime(Time orderTime) {
-        this.orderTime = orderTime;
-    }
-
-    public Date getOrderDate() {
-        return orderDate;
-    }
-
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
-    }
 
     public long getId() {
         return id;
@@ -115,6 +96,13 @@ public class JPost {
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
     }
 }
 
